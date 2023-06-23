@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./assests/style.css"></link>
+    <script src="./assests/script.js" defer></script>  
+
+</head>
+<header id="header">
+  <h1>Weather Dashboard</h1>
+</header>
+
+<body>
+    <div id="search-container" class="search-container" class="p-0	m-0	place-content-center">
+    <h2 class="text-3xl font-bold underline ">Search for a City:</h2>
+    <input name="city-search" id="city-search" placeholder="San Francisco"></input>
+    <button id="searchbtn" class="button">Search</button>
+      <div id="recent-cities">
+        <p>recent city</p>
+      </div>
+
+    </div>
+
+    <div id="city-info">
+      <h2 id="city-name"> San Francisco 7/23/2023☀️</h2>
+    </div>
+
+    <div id="forecast-container">
+      <h2 id="forecast-title">5-Day Forecast</h2>
+    </div>
+   </body>
+</html>
