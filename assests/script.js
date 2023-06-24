@@ -6,7 +6,8 @@ let cityData = document.getElementById('city-info');
 let cityName = document.getElementById('city-name');
 let cityWeather = document.getElementById('city-weather');
 let forecastContainer = document.getElementById('forecast-container');
-//let currentDate = dayjs().format('dddd MMMM, DD HH');
+let forecastTitle = document.getElementById('forecast-title');
+let currentDate = dayjs().format('MMMM, DD YYYY');
 
 const emojiUnicode = {
   "01d": "\u2600",  // Clear sky (sun)
@@ -32,7 +33,7 @@ const emojiUnicode = {
 //let input= "London";
 
 let displaymessage = function (){
-  //if theres a message ther it will delete it forst 
+  //if theres a message their it will delete it forst 
   let existingMessage = document.getElementById('error-message');
   if (existingMessage) {
     existingMessage.remove();
@@ -52,7 +53,6 @@ function getWeather() {
       .then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
-            console.log(data);
             displayWeather(data);
             getForecast(data);
             
@@ -60,7 +60,7 @@ function getWeather() {
           //will run if it cant call the api
         } else {
           console.log('Error: Cannot reach API');
-          displaymessage ();
+          displaymessage();
         }
       })
       //will run if it cant connect to the server
@@ -81,31 +81,57 @@ function getWeather() {
     let emoji = emojiUnicode[iconCode];
 
     //display weather in div
-    cityName.textContent = `${city} ${currentDate} ${emoji}`;
+    cityName.textContent = `${city} (${currentDate}) ${emoji}`;
     cityWeather.innerHTML = `Temperature: ${temp}°F<br> Wind: ${wind}MPH<br> Humidity: ${humidity}%<br>`;
   }
 
   let getWeatherForecast = data =>{
-    //will run throught the loop 40 times
+    forecastContainer.innerHTML = '';
+
+    //will run through the loop 40 times
     for (let i = 0; i < data.cnt; i++) {
       if (i % 8 === 0) { //will only get 5 day worth of forecast
-        
+        //console.log(city,temp,wind,humidity,emoji);
+        //get the data need to add to HTML
+        let temp = data.list[i].main.temp;
+        let wind = data.list[i].wind.speed;
+        let humidity = data.list[i].main.humidity;
+        let iconCode = data.list[i].weather[0].icon;
+        let emoji = emojiUnicode[iconCode];
+
+        let forecast = document.createElement('div');
+        forecast.id = 'forecast';
+
+        let date = document.createElement('h3');
+        date.id = `date${i}`;
+
+        let weather = document.createElement('p');
+        weather.id = 'weather';
+
+        weather.innerHTML = `${emoji}<br>Temperature: ${temp}°F<br> Wind: ${wind}MPH<br> Humidity: ${humidity}%<br>`;
+
+        forecast.appendChild(date);
+        forecast.appendChild(weather);
+        forecastContainer.append(forecast);
         continue; // Skip the current iteration when i is divisible by 8
       }
-    
     }
-    console.log(data);
+       for (let j = 0 ; j < 5 ; j++) {
+        let date = document.getElementById(`date${j}`);
+
+         futureDate = dayjs().add(j,'day').format('MMMM, DD YYYY');
+         console.log(futureDate);
+         console.log(`date${j}`);
+         // get the next line to work 
+         //date.innerHTML = futureDate;
+    }
   }
+  //get the forecast information
   let getForecast = function(data){
     let lon = data.coord.lon.toFixed(2);
     let lat = data.coord.lat.toFixed(2);
     let forecastWeatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-    let city = data.name;
-    let temp = data.main.temp;
-    let wind = data.wind.speed;
-    let humidity = data.main.humidity;
-
-    fetch(forecastWeatherURL)
+      fetch(forecastWeatherURL)
       .then(function(response){
         if (response.ok){
           response.json().then(function(data){
@@ -119,11 +145,15 @@ function getWeather() {
         .catch(function (error) {
           console.log('error');
         });
-
       }
     
   searchBtn.addEventListener("click", function() {
   getWeather();
+  });
+
+  window.addEventListener('load', function() {
+    input.value = "San Francisco";
+    getWeather(input.value);
   });
 
   

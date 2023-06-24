@@ -7,11 +7,8 @@
     <title>Weather</title>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="./assests/style.css"></link>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js" defer></script>
     <script src="./assests/script.js" defer></script>  
-    <script
-      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-      crossorigin="anonymous" defer></script>
 </head>
 <header id="header">
   <h1>Weather Dashboard</h1>
@@ -20,7 +17,7 @@
 <body>
     <div id="search-container" class="search-container" class="p-0	m-0	place-content-center">
     <h2 class="text-3xl font-bold underline ">Search for a City:</h2>
-    <input name="city-search" id="city-search" placeholder="San Francisco"></input>
+    <input name="city-search" id="city-search" placeholder="e.g. San Francisco"></input>
     <button id="searchbtn" class="button">Search</button>
       <div id="recent-cities">
         <p>recent city</p>
@@ -29,12 +26,12 @@
     </div>
 
     <div id="city-info">
-      <h2 id="city-name"> San Francisco 7/23/2023☀️</h2>
+      <h2 id="city-name"></h2>
       <p id="city-weather"></p>
     </div>
 
     <div id="forecast-container">
-      <h2 id="forecast-title">5-Day Forecast</h2>
+      <h2 id="forecast-title">5-Day Forecast:</h2>
     </div>
    </body>
 </html>
