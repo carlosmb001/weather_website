@@ -10,7 +10,7 @@ let forecastTitle = document.getElementById('forecast-title');
 let currentDate = dayjs().format('MMMM, DD YYYY');
 
 const emojiUnicode = {
-  "01d": "\u2600",  // Clear sky (sun)
+  "01d": "☀️",  // Clear sky (sun)
   "01n": "\uD83C\uDF11",  // Clear sky (moon)
   "02d": "\uD83C\uDF24",  // Few clouds
   "02n": "\uD83C\uDF25",  // Few clouds
@@ -33,7 +33,7 @@ const emojiUnicode = {
 //let input= "London";
 
 let displaymessage = function (){
-  //if theres a message their it will delete it forst 
+  //if theres a message their it will delete it first 
   let existingMessage = document.getElementById('error-message');
   if (existingMessage) {
     existingMessage.remove();
@@ -130,7 +130,7 @@ function getWeather() {
   let getForecast = function(data){
     let lon = data.coord.lon.toFixed(2);
     let lat = data.coord.lat.toFixed(2);
-    let forecastWeatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    let forecastWeatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
       fetch(forecastWeatherURL)
       .then(function(response){
         if (response.ok){
