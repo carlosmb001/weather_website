@@ -9,9 +9,17 @@ let forecastContainer = document.getElementById('forecast-container');
 let forecastTitle = document.getElementById('forecast-title');
 let currentDate = dayjs().format('MMMM, DD YYYY');
 
+let city1 = document.getElementById('city1');
+let city2 = document.getElementById('city2');
+let city3 = document.getElementById('city3');
+let city4 = document.getElementById('city4');
+let city5 = document.getElementById('city5');
+let city6 = document.getElementById('city6');
+let city7 = document.getElementById('city7');
+
 const emojiUnicode = {
   "01d": "☀️",  // Clear sky (sun)
-  "01n": "\uD83C\uDF11",  // Clear sky (moon)
+  "01n": "🌕",  // Clear sky (moon)
   "02d": "\uD83C\uDF24",  // Few clouds
   "02n": "\uD83C\uDF25",  // Few clouds
   "03d": "\uD83C\uDF25",  // Scattered clouds
@@ -156,4 +164,32 @@ function getWeather() {
     getWeather(input.value);
   });
 
-  
+
+  city1.addEventListener('click', function (){
+    input.value = "Los Angeles";
+    getWeather(input.value);
+  });
+  city2.addEventListener('click', function (){
+    input.value = "Atlanta";
+    getWeather(input.value);
+  });
+  city3.addEventListener('click', function (){
+    input.value = "New York";
+    getWeather(input.value);
+  });
+  city4.addEventListener('click', function (){
+    input.value = "London";
+    getWeather(input.value);
+  });
+  city5.addEventListener('click', function (){
+    input.value = "Paris";
+    getWeather(input.value);
+  });
+  city6.addEventListener('click', function (){
+    input.value = "Austin";
+    getWeather(input.value);
+  });
+  city7.addEventListener('click', function (){
+    input.value = "Miami";
+    getWeather(input.value);
+  });

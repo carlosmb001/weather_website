@@ -86,6 +86,7 @@ button:active {
 
 }
 #city-info{
+    font-size: 25px;
     flex-basis: 50%;
     border-style: double;
     border-width: 15px;
@@ -94,8 +95,8 @@ button:active {
 }
 
 #forecast-container{
-    position: absolute;
-    top: 50%; left: 30%;
+    font-size: 30px;
+    top: 35%; left: 34.5%;
     display: flex;
     width: 60%;
     border-style: double;
