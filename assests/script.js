@@ -95,7 +95,7 @@ function getWeather() {
 
   let getWeatherForecast = data =>{
     forecastContainer.innerHTML = '';
-
+  let dateindex = 0;
     //will run through the loop 40 times
     for (let i = 0; i < data.cnt; i++) {
       if (i % 8 === 0) { //will only get 5 day worth of forecast
@@ -111,7 +111,8 @@ function getWeather() {
         forecast.id = 'forecast';
 
         let date = document.createElement('h3');
-        date.id = `date${i}`;
+        date.id = `date${dateindex}`;
+        dateindex++;
 
         let weather = document.createElement('p');
         weather.id = 'weather';
@@ -126,12 +127,12 @@ function getWeather() {
     }
        for (let j = 0 ; j < 5 ; j++) {
         let date = document.getElementById(`date${j}`);
-
+        console.log(date);
          futureDate = dayjs().add(j,'day').format('MMMM, DD YYYY');
          console.log(futureDate);
          console.log(`date${j}`);
          // get the next line to work 
-         //date.innerHTML = futureDate;
+         date.innerHTML = futureDate;
     }
   }
   //get the forecast information

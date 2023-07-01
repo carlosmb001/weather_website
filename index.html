@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link rel="stylesheet" href="./assests/style.css"></link>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js" defer></script>
-    <script src="./assests/script.js" defer></script>  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link rel="stylesheet" href="./assests/style.css">
+  </link>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js" defer></script>
+  <script src="./assests/script.js" defer></script>
 </head>
 <header id="header">
   <h1>Weather Dashboard</h1>
@@ -17,9 +19,9 @@
 <body>
   <div class="main-container">
     <div id="search-container" class="search-container" class="p-0	m-0	place-content-center">
-    <h2 class="text-3xl font-bold underline ">Search for a City:</h2>
-    <input name="city-search" id="city-search" placeholder="e.g. San Francisco"></input>
-    <button id="searchbtn" class="search-button">Search</button>
+      <h2 class="text-3xl font-bold underline ">Search for a City:</h2>
+      <input name="city-search" id="city-search" placeholder="e.g. San Francisco"></input>
+      <button id="searchbtn" class="search-button">Search</button>
       <div id="recent-cities">
         <button id="city1">Los Angeles</button>
         <button id="city2">Atlanta</button>
@@ -32,15 +34,17 @@
 
     </div>
     <div class="weather ">
-    <div id="city-info">
-      <h2 id="city-name"></h2>
-      <p id="city-weather"></p>
-    </div>
-    </div>
+      <div id="city-info">
+        <h2 id="city-name"></h2>
+        <p id="city-weather"></p>
+      </div>
 
-    <div id="forecast-container">
-      <h2 id="forecast-title">5-Day Forecast:</h2>
+
+      <div id="forecast-container">
+        <h2 id="forecast-title">5-Day Forecast:</h2>
+      </div>
     </div>
-    </div>
-   </body>
+  </div>
+</body>
+
 </html>
