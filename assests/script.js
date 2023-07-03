@@ -17,6 +17,7 @@ let city5 = document.getElementById('city5');
 let city6 = document.getElementById('city6');
 let city7 = document.getElementById('city7');
 
+
 const emojiUnicode = {
   "01d": "☀️",  // Clear sky (sun)
   "01n": "🌕",  // Clear sky (moon)
@@ -37,8 +38,6 @@ const emojiUnicode = {
   "50d": "\uD83C\uDF2B",  // Mist
   "50n": "\uD83C\uDF2B"  // Mist
 };
-
-//let input= "London";
 
 let displaymessage = function (){
   //if theres a message their it will delete it first 
@@ -165,7 +164,7 @@ function getWeather() {
     getWeather(input.value);
   });
 
-
+  //created event listners for each city by default
   city1.addEventListener('click', function (){
     input.value = "Los Angeles";
     getWeather(input.value);

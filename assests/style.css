@@ -1,5 +1,5 @@
 *{
-    border-color: rgb(0, 0, 0);
+    border-color:  rgb(14, 55, 126);
     margin: 0;
     padding: 0;
 }
@@ -10,23 +10,24 @@
 #header {  
     margin: 0 auto; 
     padding: 5px;
-    background-color: rgb(60, 60, 236);
+    background-color: rgb(60, 124, 236);
     color: white;
     text-align: center;
 }
 #city-search{
     height: 26px;
-    margin: 0 auto;
+    margin: 5px auto;
     width: 100%;
+    border-radius: 5px;
 }
 .search-button{
     padding: 4px 4px;
     font-size: 15px;
     margin: 0 auto;
-    border-radius: 4px;
+    border-radius: 5px;
     background-color: white;
     color: black;
-    border: 2px solid rgb(212, 2, 212);
+    border: 2px solid rgb(60, 124, 236);
     transition-duration: 0.4s;
 
 }
@@ -39,7 +40,7 @@ button{
     border-radius: 10px;
     background-color: white;
     color: black;
-    border: 2px solid rgb(212, 2, 212);
+    border: 2px solid  rgb(60, 124, 236);
     transition-duration: 0.4s;
 
 }
@@ -50,12 +51,12 @@ button{
     border-radius: 4px;
     background-color: white;
     color: black;
-    border: 2px solid rgb(212, 2, 212);
+    border: 2px solid rgb(60, 124, 236);
     transition-duration: 0.4s;
 
 }
 button:hover {
-    background-color: rgb(212, 2, 212);
+    background-color: rgb(2, 212, 121);
     color: white;
   }
 button:active {
@@ -69,28 +70,28 @@ button:active {
     margin: 5px auto;
     top: 50%;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: white;
     color: black;
-    border: 2px solid rgb(212, 2, 212);
+    border: 2px solid rgb(2, 107, 212);
     transition-duration: 0.4s;
 }
 
 #search-container {
     flex-basis: 30%;
     width: 30%;
-    border-style: double;
-    border-width: 15px;
-    border-radius: 20px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
     padding: 10px;
 
 }
 #city-info{
     font-size: 25px;
     flex-basis: 50%;
-    border-style: double;
-    border-width: 15px;
-    border-radius: 20px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
     padding: 5px;
 }
 
@@ -98,11 +99,11 @@ button:active {
     font-size: 30px;
     top: 35%; left: 34.5%;
     display: flex;
-    width: 60%;
-    border-style: double;
-    border-width: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 5px;
 }
-
-
+/* fpr the 5 day forecasts */
+#forecast{
+    margin: 5px 5px;
+    background-color: rgb(60, 124, 236);
+}
