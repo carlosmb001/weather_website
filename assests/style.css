@@ -79,7 +79,8 @@ button:active {
 
 #search-container {
     flex-basis: 40%;
-    min-width: 30%;
+    min-width: 20%;
+    max-width: 40;
     border-style: solid;
     border-width: 5px;
     border-radius: 5px;

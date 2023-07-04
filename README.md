@@ -23,6 +23,7 @@ Click the search button or press Enter to retrieve the weather data.
 View the current weather conditions and the 5-day forecast for the selected city.
 To view weather conditions for a previously searched city, click on the city name in the search history.
 
+![Weather dashboard](assests/weather_app.png)
 ## Installation
 N/A
 
