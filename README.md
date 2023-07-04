@@ -27,11 +27,11 @@ To view weather conditions for a previously searched city, click on the city nam
 ## Installation
 N/A 
 
-![Website-link](https://carlosmb001.github.io/weather_website/)
+[Website-link](https://carlosmb001.github.io/weather_website/)
 ## Credits
 This project was developed by Carlos Martinez
 
-![Emoji Unicode](https://emojiterra.com/)
+[Emoji Unicode](https://emojiterra.com/)
 
 The weather data is provided by the OpenWeather API.
 
