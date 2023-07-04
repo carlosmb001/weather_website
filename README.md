@@ -1,4 +1,4 @@
-## Weather Dashboard
+# Weather Dashboard
 
 ## Description
 The Weather Dashboard is a web application that allows travelers to view the weather outlook for multiple cities. Users can search for a city and retrieve current and future weather conditions for that city. The application utilizes the OpenWeather API to retrieve weather data and stores user's search history using localStorage.
