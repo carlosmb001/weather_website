@@ -2,6 +2,7 @@
 
 ## Description
 The Weather Dashboard is a web application that allows travelers to view the weather outlook for multiple cities. Users can search for a city and retrieve current and future weather conditions for that city. The application utilizes the OpenWeather API to retrieve weather data and stores user's search history using localStorage.
+I learned to to call Weather Dashboard and use javascript to display the data into the HTML page.
 
 ## Features
 Search for a city to view current and future weather conditions
@@ -27,7 +28,7 @@ N/A
 
 ## Credits
 This project was developed by Carlos Martinez
-Emoji Unicode ![https://emojiterra.com/]
+![Emoji Unicode](https://emojiterra.com/)
 
 The weather data is provided by the OpenWeather API.
 
