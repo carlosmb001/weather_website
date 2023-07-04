@@ -30,6 +30,9 @@ N/A
 ![Website-link](https://carlosmb001.github.io/weather_website/)
 ## Credits
 This project was developed by Carlos Martinez
+
 ![Emoji Unicode](https://emojiterra.com/)
+
 The weather data is provided by the OpenWeather API.
+
 Helped debugging help from my tutor Sachin
