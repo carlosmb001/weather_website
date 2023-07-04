@@ -32,6 +32,3 @@ This project was developed by Carlos Martinez
 ![Emoji Unicode](https://emojiterra.com/)
 
 The weather data is provided by the OpenWeather API.
-
-## License
-This project is licensed under the MIT License.
