@@ -78,8 +78,8 @@ button:active {
 }
 
 #search-container {
-    flex-basis: 30%;
-    width: 30%;
+    flex-basis: 40%;
+    min-width: 30%;
     border-style: solid;
     border-width: 5px;
     border-radius: 5px;
@@ -87,7 +87,7 @@ button:active {
 
 }
 #city-info{
-    font-size: 25px;
+    font-size: 20px;
     flex-basis: 50%;
     border-style: solid;
     border-width: 5px;
@@ -96,7 +96,7 @@ button:active {
 }
 
 #forecast-container{
-    font-size: 30px;
+    font-size: 25px;
     top: 35%; left: 34.5%;
     display: flex;
     border-radius: 10px;

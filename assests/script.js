@@ -31,8 +31,8 @@ const emojiUnicode = {
   "09n": "\uD83C\uDF27",  // Shower rain
   "10d": "\uD83C\uDF26",  // Rain
   "10n": "\uD83C\uDF26",  // Rain
-  "11d": "\u26C8",  // Thunderstorm
-  "11n": "\u26C8",  // Thunderstorm
+  "11d": "⛈️",  // Thunderstorm
+  "11n": "⛈️",  // Thunderstorm
   "13d": "\uD83C\uDF28",  // Snow
   "13n": "\uD83C\uDF28",  // Snow
   "50d": "\uD83C\uDF2B",  // Mist
@@ -62,6 +62,7 @@ function getWeather() {
           response.json().then(function (data) {
             displayWeather(data);
             getForecast(data);
+            localStorage.setItem('city-search',input.value);
             
           })
           //will run if it cant call the api
@@ -126,10 +127,7 @@ function getWeather() {
     }
        for (let j = 0 ; j < 5 ; j++) {
         let date = document.getElementById(`date${j}`);
-        console.log(date);
          futureDate = dayjs().add(j,'day').format('MMMM, DD YYYY');
-         console.log(futureDate);
-         console.log(`date${j}`);
          // get the next line to work 
          date.innerHTML = futureDate;
     }
@@ -166,7 +164,7 @@ function getWeather() {
 
   //created event listners for each city by default
   city1.addEventListener('click', function (){
-    input.value = "Los Angeles";
+    input.value = localStorage;
     getWeather(input.value);
   });
   city2.addEventListener('click', function (){
