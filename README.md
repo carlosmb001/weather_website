@@ -25,8 +25,9 @@ To view weather conditions for a previously searched city, click on the city nam
 
 ![Weather dashboard](assests/weather_app.png)
 ## Installation
-N/A
-![Website-link] (https://carlosmb001.github.io/weather_website/)
+N/A 
+
+![Website-link](https://carlosmb001.github.io/weather_website/)
 ## Credits
 This project was developed by Carlos Martinez
 ![Emoji Unicode](https://emojiterra.com/)
