@@ -30,5 +30,5 @@ N/A
 ## Credits
 This project was developed by Carlos Martinez
 ![Emoji Unicode](https://emojiterra.com/)
-
 The weather data is provided by the OpenWeather API.
+Helped debugging help from my tutor Sachin
